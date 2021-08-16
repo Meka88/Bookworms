@@ -1,0 +1,13 @@
+
+<h1 style="padding-left: 35px; color:darkmagenta">Reviews</h1>
+<div class="row" style="padding: 25px;">
+    {{#if currentUser}}
+    <a href="/reviews/new">New Review</a>
+    {{/if}}
+        
+    {{#each reviews}}
+
+    <h2><a href="/reviews/{{this._id}}" style="text-decoration: none;">{{this.bookTitle}}</a></h2>
+    {{/each}}
+    
+</div>

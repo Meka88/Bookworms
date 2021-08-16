@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid" style="background-color: rgb(150, 190, 187);">
+    <a class="navbar-brand" href="#">Bookworms</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="color: rgb(12, 12, 12);">
+        <li class="nav-item" style="color: rgb(12, 12, 12);">
+          <a href="/" class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="color: rgb(12, 12, 12);">My books</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(12, 12, 12);">
+            Browse
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Recommendations</a></li>
+            <li><a class="dropdown-item" href="#">New Releases</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">List</a></li>
+          </ul>
+        </li>
+        
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit" style="background-color: darkcyan; color:rgb(10, 10, 10)">Search</button>
+      </form>
+        {{#if currentUser}}
+        
+        <a href="/logout" class="btn btn-danger" style="background-color:rgb(182, 103, 114); color:rgb(12, 12, 12); border:none">Logout</a>
+        {{else}}
+        <a href="/sign-up" class="btn btn-info" style="background-color:rgb(182, 103, 114); color:rgb(10, 10, 10); border:none">Sign Up</a>
+        
+        <a href="/login" class="btn btn-success" style="background-color:rgb(182, 103, 114); color:rgb(10, 10, 10); border:none">Login</a>
+        
+        
+        {{/if}}
+    </div>
+  </div>
+</nav>
